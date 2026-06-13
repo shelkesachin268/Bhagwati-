@@ -19,7 +19,6 @@
         </div>
         <nav>
             <a href="#products">Our Products</a>
-            <a href="#features">Features</a>
             <button class="cart-btn" onclick="toggleCart()">
                 <i class="fas fa-shopping-cart"></i> Cart <span id="cart-count">0</span>
             </button>
@@ -34,6 +33,49 @@
             <a href="#products" class="cta-btn">Explore Collection</a>
         </div>
     </section>
+
+    <main id="products">
+        <h2 class="section-title">Our Sacred Chanting Collections</h2>
+        <div class="product-grid" id="product-container">
+            </div>
+    </main>
+
+    <div id="product-detail-modal" class="modal-overlay">
+        <div class="modal-container">
+            <button class="close-modal" onclick="closeProductModal()">&times;</button>
+            <div class="modal-content" id="modal-content-body">
+                </div>
+        </div>
+    </div>
+
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Sacred Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            </div>
+        <div class="cart-footer">
+            <div class="total-price-box">
+                <span>Total Amount:</span>
+                <span id="cart-total">₹0</span>
+            </div>
+            <button class="whatsapp-checkout-btn" onclick="checkoutToWhatsApp()">
+                <i class="fab fa-whatsapp"></i> Order Now via WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-tagline">
+            <span class="lotus">🪷</span> Sacred Chants. Divine Energy. Infinite Peace.
+        </div>
+        <p>&copy; 2026 Bhagwati Divine. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
     <section id="features" class="features-section">
         <div class="feature-card">
