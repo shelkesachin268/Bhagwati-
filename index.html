@@ -1,39 +1,97 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bhagwati Divine</title><link rel="stylesheet" href="style.css"></head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhagwati Divine - Sacred Mantra Chanting Machines</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
 <body>
-<header class="hero">
-<div class="overlay">
-<h1>ॐ Bhagwati Divine</h1>
-<p>Sacred Chants • Divine Energy • Infinite Peace</p>
-</div>
-</header>
-<section class="products" id="products"></section>
-<script src="script.js"></script>
-</body></html>
-<section id="product">
 
-<div class="product-container">
+    <header>
+        <div class="logo-container">
+            <div class="om-symbol">ॐ</div>
+            <div class="brand-info">
+                <h1>Bhagwati Divine</h1>
+                <p>Spirituality • Peace • Positivity</p>
+            </div>
+        </div>
+        <nav>
+            <a href="#products">Our Products</a>
+            <a href="#features">Features</a>
+            <button class="cart-btn" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i> Cart <span id="cart-count">0</span>
+            </button>
+        </nav>
+    </header>
 
-<div class="product-image">
-<img src="product.jpg">
-</div>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="devotional-text">|| सर्वे भवन्तु सुखिनः ||</div>
+            <h2>Awaken Divine Energy<br>In Your Home</h2>
+            <p>Bring peace, positivity, and spiritual vibrations into your daily life with divine chanting.</p>
+            <a href="#products" class="cta-btn">Explore Collection</a>
+        </div>
+    </section>
 
-<div class="product-info">
+    <section id="features" class="features-section">
+        <div class="feature-card">
+            <i class="fas fa-hand-pointer"></i>
+            <h3>Easy One-Touch</h3>
+            <p>Simple operation to change tracks effortlessly.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-volume-up"></i>
+            <h3>Clear & Pure Sound</h3>
+            <p>High-quality speaker for crystal clear audio resonance.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-home"></i>
+            <h3>Perfect for Every Home</h3>
+            <p>Compact, elegant design that blends beautifully.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Trusted Quality</h3>
+            <p>Durable build backed by excellent customer support.</p>
+        </div>
+    </section>
 
-<h2>Shree Datta Swami Jaap Mantra Machine</h2>
+    <main id="products">
+        <h2 class="section-title">Our Sacred Chanting Collections</h2>
+        <div class="product-grid" id="product-container">
+            </div>
+    </main>
 
-<div class="price">
-₹272
-</div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Sacred Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            </div>
+        <div class="cart-footer">
+            <div class="total-price-box">
+                <span>Total Amount:</span>
+                <span id="cart-total">₹0</span>
+            </div>
+            <button class="whatsapp-checkout-btn" onclick="checkoutToWhatsApp()">
+                <i class="fab fa-whatsapp"></i> Order Now via WhatsApp
+            </button>
+        </div>
+    </div>
 
-<p>
-Experience divine chanting, spiritual calm,
-and peaceful meditation every day.
-</p>
+    <footer>
+        <div class="footer-tagline">
+            <span class="lotus">🪷</span> Sacred Chants. Divine Energy. Infinite Peace.
+        </div>
+        <p>&copy; 2026 Bhagwati Divine. All Rights Reserved.</p>
+    </footer>
 
-<ul>
-<li>27 Divine Mantras</li>
+    <script src="script.js"></script>
+</body>
+</html>
 <li>Clear Spiritual Audio</li>
 <li>Easy One-Touch Operation</li>
 <li>Perfect For Home Temple</li>
