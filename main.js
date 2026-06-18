@@ -51,7 +51,7 @@ function openProduct(id) {
   const keyPointsHtml = p.keyPoints.map(k => `<li>${k}</li>`).join('');
 
   const waMsg = encodeURIComponent(
-    `Namaste! 🙏\n\nI want to buy:\n*${p.name}*\nPrice: ₹${p.price}\n\nPlease confirm availability and delivery details.`
+    `Namaste! 🙏\n\nI want to buy from *Bhagwati Enterprises*:\n*${p.name}*\nPrice: ₹${p.price}\n\nPlease confirm availability and delivery details.`
   );
 
   document.getElementById('modalContent').innerHTML = `
@@ -208,7 +208,7 @@ function toggleCart() {
 
 function orderOnWhatsApp() {
   if (cart.length === 0) return;
-  let msg = `Namaste! 🙏 I want to order:\n\n`;
+  let msg = `Namaste! 🙏 I want to order from *Bhagwati Enterprises*:\n\n`;
   cart.forEach(c => {
     msg += `• *${c.name}*\n  Qty: ${c.qty} × ₹${c.price} = ₹${c.price * c.qty}\n\n`;
   });
