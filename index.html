@@ -1,218 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bhagwati Divine - Sacred Mantra Chanting Machines</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Divine Chants – Sacred Mantra Machines</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Lato:wght@300;400;700&family=Crimson+Text:ital,wght@0,400;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-    <header>
-        <div class="logo-container">
-            <div class="om-symbol">ॐ</div>
-            <div class="brand-info">
-                <h1>Bhagwati Divine</h1>
-                <p>Spirituality • Peace • Positivity</p>
-            </div>
-        </div>
-        <nav>
-            <a href="#products">Our Products</a>
-            <button class="cart-btn" onclick="toggleCart()">
-                <i class="fas fa-shopping-cart"></i> Cart <span id="cart-count">0</span>
-            </button>
-        </nav>
-    </header>
+<!-- MANDALA CANVAS BACKGROUND -->
+<canvas id="mandalaCanvas"></canvas>
 
-    <section class="hero">
-        <div class="hero-content">
-            <div class="devotional-text">|| सर्वे भवन्तु सुखिनः ||</div>
-            <h2>Awaken Divine Energy<br>In Your Home</h2>
-            <p>Bring peace, positivity, and spiritual vibrations into your daily life with divine chanting.</p>
-            <a href="#products" class="cta-btn">Explore Collection</a>
-        </div>
-    </section>
+<!-- FLOATING INCENSE PARTICLES -->
+<div class="particles" id="particles"></div>
 
-    <main id="products">
-        <h2 class="section-title">Our Sacred Chanting Collections</h2>
-        <div class="product-grid" id="product-container">
-            </div>
-    </main>
-
-    <div id="product-detail-modal" class="modal-overlay">
-        <div class="modal-container">
-            <button class="close-modal" onclick="closeProductModal()">&times;</button>
-            <div class="modal-content" id="modal-content-body">
-                </div>
-        </div>
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-om">ॐ</span>
+      <div class="logo-text">
+        <span class="logo-main">Divine Chants</span>
+        <span class="logo-sub">Sacred Mantra Machines</span>
+      </div>
     </div>
+    <nav class="nav">
+      <a href="#products" class="nav-link">Products</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn" onclick="toggleCart()">
+      <span class="cart-icon">🛒</span>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
 
-    <div class="cart-sidebar" id="cart-sidebar">
-        <div class="cart-header">
-            <h3>Your Sacred Cart</h3>
-            <button class="close-cart" onclick="toggleCart()">&times;</button>
-        </div>
-        <div class="cart-items" id="cart-items">
-            </div>
-        <div class="cart-footer">
-            <div class="total-price-box">
-                <span>Total Amount:</span>
-                <span id="cart-total">₹0</span>
-            </div>
-            <button class="whatsapp-checkout-btn" onclick="checkoutToWhatsApp()">
-                <i class="fab fa-whatsapp"></i> Order Now via WhatsApp
-            </button>
-        </div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-mantra">ॐ नमः शिवाय</div>
+    <h1 class="hero-title">Sacred Mantra<br/><em>Chanting Machines</em></h1>
+    <p class="hero-subtitle">Fill your home with divine vibrations. Experience the transformative power of continuous mantra chanting — day and night, bringing peace, prosperity and spiritual bliss.</p>
+    <div class="hero-cta">
+      <a href="#products" class="btn-primary">Explore Sacred Devices</a>
+      <a href="https://wa.me/919999999999" target="_blank" class="btn-secondary">📿 Talk to Us</a>
     </div>
-
-    <footer>
-        <div class="footer-tagline">
-            <span class="lotus">🪷</span> Sacred Chants. Divine Energy. Infinite Peace.
-        </div>
-        <p>&copy; 2026 Bhagwati Divine. All Rights Reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
-
-    <section id="features" class="features-section">
-        <div class="feature-card">
-            <i class="fas fa-hand-pointer"></i>
-            <h3>Easy One-Touch</h3>
-            <p>Simple operation to change tracks effortlessly.</p>
-        </div>
-        <div class="feature-card">
-            <i class="fas fa-volume-up"></i>
-            <h3>Clear & Pure Sound</h3>
-            <p>High-quality speaker for crystal clear audio resonance.</p>
-        </div>
-        <div class="feature-card">
-            <i class="fas fa-home"></i>
-            <h3>Perfect for Every Home</h3>
-            <p>Compact, elegant design that blends beautifully.</p>
-        </div>
-        <div class="feature-card">
-            <i class="fas fa-shield-alt"></i>
-            <h3>Trusted Quality</h3>
-            <p>Durable build backed by excellent customer support.</p>
-        </div>
-    </section>
-
-    <main id="products">
-        <h2 class="section-title">Our Sacred Chanting Collections</h2>
-        <div class="product-grid" id="product-container">
-            </div>
-    </main>
-
-    <div class="cart-sidebar" id="cart-sidebar">
-        <div class="cart-header">
-            <h3>Your Sacred Cart</h3>
-            <button class="close-cart" onclick="toggleCart()">&times;</button>
-        </div>
-        <div class="cart-items" id="cart-items">
-            </div>
-        <div class="cart-footer">
-            <div class="total-price-box">
-                <span>Total Amount:</span>
-                <span id="cart-total">₹0</span>
-            </div>
-            <button class="whatsapp-checkout-btn" onclick="checkoutToWhatsApp()">
-                <i class="fab fa-whatsapp"></i> Order Now via WhatsApp
-            </button>
-        </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">22+</span><span class="stat-label">Sacred Models</span></div>
+      <div class="stat-divider">|</div>
+      <div class="stat"><span class="stat-num">10,000+</span><span class="stat-label">Happy Devotees</span></div>
+      <div class="stat-divider">|</div>
+      <div class="stat"><span class="stat-num">108</span><span class="stat-label">Mantras Loaded</span></div>
     </div>
-
-    <footer>
-        <div class="footer-tagline">
-            <span class="lotus">🪷</span> Sacred Chants. Divine Energy. Infinite Peace.
-        </div>
-        <p>&copy; 2026 Bhagwati Divine. All Rights Reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
-<li>Clear Spiritual Audio</li>
-<li>Easy One-Touch Operation</li>
-<li>Perfect For Home Temple</li>
-<li>Made In India</li>
-</ul>
-
-<a class="order-btn"
-href="https://wa.me/919999999999">
-Order On WhatsApp
-</a>
-
-</div>
-
-</div>
-
+  </div>
+  <div class="hero-scroll">↓ Scroll to Explore</div>
 </section>
 
-<section class="mantras">
-
-<h2>Divine Vibrations</h2>
-
-<div class="cards">
-
-<div class="card">Om Namah Shivaya</div>
-<div class="card">Gayatri Mantra</div>
-<div class="card">Datta Swami Jaap</div>
-<div class="card">Maha Mrityunjaya</div>
-<div class="card">Hanuman Chalisa</div>
-<div class="card">Vishnu Sahasranamam</div>
-
+<!-- DIVIDER -->
+<div class="divider-lotus">
+  <span>❋</span><span class="line"></span><span>🪷</span><span class="line"></span><span>❋</span>
 </div>
 
+<!-- PRODUCTS SECTION -->
+<section class="products-section" id="products">
+  <div class="section-header">
+    <p class="section-eyebrow">Our Sacred Collection</p>
+    <h2 class="section-title">Choose Your Divine Companion</h2>
+    <p class="section-desc">Each machine is crafted to radiate sacred energy, chanting holy mantras ceaselessly to purify your space and elevate your consciousness.</p>
+  </div>
+  <div class="products-grid" id="productsGrid"></div>
 </section>
 
-<section class="benefits">
-
-<h2>Spiritual Benefits</h2>
-
-<div class="benefit-grid">
-
-<div>
-<h3>🙏 Peace</h3>
-<p>Calms the mind and removes stress.</p>
-</div>
-
-<div>
-<h3>🪔 Positivity</h3>
-<p>Creates a sacred atmosphere.</p>
-</div>
-
-<div>
-<h3>🧘 Meditation</h3>
-<p>Improves focus and concentration.</p>
-</div>
-
-<div>
-<h3>🌼 Devotion</h3>
-<p>Deepens spiritual connection.</p>
-</div>
-
-</div>
-
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="about-inner">
+    <div class="about-symbol">ॐ</div>
+    <h2 class="about-title">Why Divine Chants?</h2>
+    <div class="about-grid">
+      <div class="about-card">
+        <span class="about-icon">🔔</span>
+        <h3>24×7 Chanting</h3>
+        <p>Let sacred vibrations fill your home day and night, even while you sleep or work.</p>
+      </div>
+      <div class="about-card">
+        <span class="about-icon">⚡</span>
+        <h3>Low Power Consumption</h3>
+        <p>Energy-efficient devices designed for continuous operation with minimal electricity use.</p>
+      </div>
+      <div class="about-card">
+        <span class="about-icon">🎵</span>
+        <h3>Crystal Clear Sound</h3>
+        <p>High-quality speakers deliver authentic, resonant mantra recitation with devotion.</p>
+      </div>
+      <div class="about-card">
+        <span class="about-icon">🪷</span>
+        <h3>Multiple Mantras</h3>
+        <p>Loaded with dozens of sacred mantras — Gayatri, Mahamrityunjaya, Om Namah Shivaya and more.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="cta">
-
-<h2>Bring Sacred Vibrations Home Today</h2>
-
-<a href="https://wa.me/919999999999">
-Order Now
-</a>
-
+<!-- CONTACT / WHATSAPP -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-om">ॐ</div>
+    <h2>Have Questions? Talk to Us</h2>
+    <p>Our devotion team is always ready to guide you to the perfect sacred device for your home and needs.</p>
+    <a href="https://wa.me/919999999999?text=Namaste!%20I%20am%20interested%20in%20your%20Mantra%20Chanting%20Machines." target="_blank" class="whatsapp-btn">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Chat on WhatsApp
+    </a>
+  </div>
 </section>
 
-<footer>
-ॐ Peace • Positivity • Devotion ॐ
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-om">ॐ</div>
+  <p class="footer-tagline">Spreading Divine Vibrations, One Mantra at a Time</p>
+  <div class="footer-links">
+    <a href="#products">Products</a>
+    <a href="https://wa.me/919999999999" target="_blank">WhatsApp</a>
+    <a href="https://www.meesho.com" target="_blank">Meesho Store</a>
+  </div>
+  <p class="footer-copy">© 2026 Divine Chants. Made with 🙏 and devotion.</p>
 </footer>
 
-<script src="script.js"></script>
+<!-- PRODUCT MODAL / DETAIL PAGE -->
+<div class="product-modal" id="productModal">
+  <div class="modal-overlay" onclick="closeProduct()"></div>
+  <div class="modal-content" id="modalContent"></div>
+</div>
 
+<!-- CART DRAWER -->
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-overlay" onclick="toggleCart()"></div>
+  <div class="cart-panel">
+    <div class="cart-header">
+      <h3>🛒 Your Sacred Cart</h3>
+      <button class="cart-close" onclick="toggleCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty">
+        <span>🪷</span>
+        <p>Your cart is empty.<br/>Add some divine products!</p>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cartTotal">₹0</span>
+      </div>
+      <button class="whatsapp-order-btn" id="whatsappOrderBtn" onclick="orderOnWhatsApp()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Order via WhatsApp
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="products.js"></script>
+<script src="main.js"></script>
 </body>
-  </html>
+</html>
