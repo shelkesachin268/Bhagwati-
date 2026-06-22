@@ -24,7 +24,7 @@ const products = [
     price: 499,
     mrp: 999,
     images: [
-      "https://images.meesho.com/images/products/974070243/ssk4w_512.avif?width=512",
+      "https://images.meesho.com/images/products/954417750/adztx.jpg",
       "https://images.unsplash.com/photo-1599408952748-8dfbacc28df1?w=600&q=80",
       "https://images.unsplash.com/photo-1564507004663-b6dfb3c824d5?w=600&q=80",
       "https://images.unsplash.com/photo-1561406636-b80293969660?w=600&q=80"
